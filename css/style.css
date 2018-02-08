@@ -1,0 +1,134 @@
+/* Body and Grid Layout */
+
+body {
+    background-color: #464647;
+    margin: 0;
+    font-size: large;
+}
+
+.site {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas: 
+        "navMenu topNav logo"
+        "navMenu main main"
+        "navMenu footer footer";
+    
+    background-color: #464647;
+    width: 100%;
+    min-height: 600px;
+}
+
+#logoDisplay {
+    grid-area: logo;
+    background-color: #966B9D;
+    padding: 3px;
+    height: 94px;
+}
+
+#topNav {
+    grid-area: topNav;
+    background-color: #966B9D;
+    line-height: 40%;
+    height: 100px;
+    padding-left: 1em;
+
+}
+
+#navMenu {
+    grid-area: navMenu;
+    background-color: #966B9D;
+    
+}
+
+#mainContent {
+    grid-area: main;
+    background-color: #464647;
+    font-family: Arial, sans-serif;
+    
+}
+
+#footer {
+    grid-area: footer;
+    background-color: #464647;
+    font-family: Arial, sans-serif;
+}
+
+/* Side navigation */
+
+#menuListing {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#menuListing li {
+    display: block;
+    width: 1fr;
+    min-width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+#menuListing li img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#menuListing li:nth-child(3n+1) {
+    background-color: #F2B880;
+}
+
+#menuListing li:nth-child(3n+2) {
+    background-color: #C98686;
+}
+
+#menuListing li:nth-child(3n+3) {
+    background-color: #966B9D;
+}
+
+/* Headers */
+
+h1 {
+    font-family: "American Typewriter", Georgia, sans-serif;
+    font-weight: normal;
+    color: #464647;
+}
+
+h2 {
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    color: #FFF4EC; 
+}
+
+h3 {
+    
+}
+
+h4 {
+    font-family: "American Typewriter", Georgia, serif;
+    font-weight: normal;
+    font-size: 0.8em;
+    color: #FFF4EC;
+    font-style: oblique;
+}
+
+/* Media Queries */
+
+@media (max-width: 1000px) {
+    body { font-size: medium; }
+    #logoDisplay img { 
+        height: 75px;
+        width: 175px;
+    }
+}
+
+@media (max-width: 500px) {
+    body { font-size: small; }
+    #logoDisplay img { 
+        height: 50px;
+        width: 100px;
+    }
+}
